@@ -1,22 +1,25 @@
 package ads.poo;
 
 public class Conta {
-    private int numConta;
+    private String numConta;
     private String titular;
     private double saldo;
 
-    public Conta(int numConta, String titular, double saldo){
+    public Conta(String numConta, String titular, double saldo){
         this.numConta = numConta;
         this.titular = titular;
         this.saldo = (saldo > 0) ? saldo : 0;
     }
 
-    public void depositar(double valor){
+    public double depositar(double valor){
+
         this.saldo += (valor > 0) ? valor : 0;
+        return saldo;
     }
 
-    public void sacar(double valor){
+    public double sacar(double valor){
         this.saldo -= (valor > saldo) ? 0 : (valor > 0) ? valor : 0;
+        return saldo;
     }
 
     public String toString(){
@@ -27,11 +30,11 @@ public class Conta {
                 """, numConta, titular, saldo);
     }
 
-    public int getNumConta() {
+    public String getNumConta() {
         return numConta;
     }
 
-    public void setNumConta(int numConta) {
+    public void setNumConta(String numConta) {
         this.numConta = numConta;
     }
 
