@@ -1,6 +1,6 @@
 package ads.poo;
 
-public class Arqueiro {
+public class Arqueiro extends Personagem{
 
     private int vida;
     private int atk;
@@ -12,18 +12,17 @@ public class Arqueiro {
         this.vel = vel;
     }
 
-    public boolean atacarComArco(atk){
+    public String atacarComArco(){
         atk = 2;
-        return Boolean.parseBoolean("Arqueiro solta uma flecha com arco.");
+        return "Arqueiro solta uma flecha";
     }
 
-    public boolean movimentarEsquerda(vel){
+    public String movimentarEsquerda(){
         vel = 1;
-        return Boolean.parseBoolean("Movimentando para esquerda.");
+        return "Movimentando para esquerda.";
     }
 
-    public boolean pularMedio(){
-        return Boolean.parseBoolean("Pulo médio realizado.");
+    public String pularMédio(){
+        return "Pulo médio realizado.";
     }
-
 }

@@ -1,6 +1,6 @@
 package ads.poo;
 
-public class Aldeao {
+public class Aldeao extends Personagem {
 
     private int vida;
     private int atk;
@@ -13,18 +13,18 @@ public class Aldeao {
         this.vel = vel;
     }
 
-    public boolean atacarComSoco(atk){
+    public String atacarComSoco(){
         atk = 1;
-        return Boolean.parseBoolean("Aldeao da um soco.");
+        return "Aldeao da um soco.";
     }
 
-    public boolean movimentarFrente(vel){
+    public String movimentarFrente(){
         vel = 0.8;
-        return Boolean.parseBoolean("Movimentando para frente.");
+        return "Movimentando para frente.";
     }
 
-    public boolean pularBaixo(){
-        return Boolean.parseBoolean("Pulo baixo realizado.");
+    public String pularBaixo(){
+        return "Pulo baixo realizado.";
     }
 
 }

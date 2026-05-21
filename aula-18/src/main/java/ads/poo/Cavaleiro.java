@@ -1,6 +1,6 @@
 package ads.poo;
 
-public class Cavaleiro {
+public class Cavaleiro extends Personagem {
     private int vida;
     private int atk;
     private double vel;
@@ -11,19 +11,18 @@ public class Cavaleiro {
         this.vel = vel;
     }
 
-    public boolean atacarComEspada(atk){
+    public String atacarComEspada(){
         atk = 3;
-        return Boolean.parseBoolean("Cavaleiro da uma espadada.");
+        return "Cavaleiro da uma espadada.";
     }
 
-    public boolean movimentarDireita(vel){
+    public String movimentarDireita(){
         vel = 2;
-        return Boolean.parseBoolean("Movimentando para esquerda.");
+        return "Movimentando para direita.";
     }
 
-    public boolean pularAlto(){
-        return Boolean.parseBoolean("Pulo alto realizado.");
+    public String pularAlto(){
+        return "Pulo alto realizado.";
     }
-
 
 }
